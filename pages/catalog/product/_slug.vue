@@ -28,9 +28,9 @@ import PriceBanner from '../../../components/product/PriceBanner.vue';
 
 export default {
     components: {
-    PriceBanner,
-    DeliveryBlock
-},
+        PriceBanner,
+        DeliveryBlock,
+    },
 
     data() {
         return {
@@ -67,6 +67,7 @@ export default {
 <style lang="scss" module>
     .ProductPage {
         padding: 0 16px;
+
         .title {
             margin: 24px 0 8px;
             font-family: $base-font;
