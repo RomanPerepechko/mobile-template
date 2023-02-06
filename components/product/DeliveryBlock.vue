@@ -72,6 +72,7 @@ export default {
 <style lang="scss" module>
     .DeliveryBlock {
         margin-bottom: 32px;
+        
         .city {
             display: flex;
             column-gap: 8px;
