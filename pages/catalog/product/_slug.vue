@@ -13,17 +13,24 @@
                 {{ item.banner_text }}
             </PriceBanner>
         </div>
+
+        <DeliveryBlock 
+            city="Иркутск"
+            :delivery="delivery"
+        />
     </div>
 </template>
 
 <script>
 import { splitThousands } from '~/assets/js/utils/numbers';
+import DeliveryBlock from '../../../components/product/DeliveryBlock.vue';
 import PriceBanner from '../../../components/product/PriceBanner.vue';
 
 export default {
     components: {
-        PriceBanner,
-    },
+    PriceBanner,
+    DeliveryBlock
+},
 
     data() {
         return {
@@ -33,6 +40,18 @@ export default {
                 price: "8990",
                 is_good_price: true,
                 banner_text: 'Выгодная цена, невозможно применение дополнительных скидок и бонусных рублей.',
+            },
+
+            delivery: {
+                courier: {
+                    period: '1 мая',
+                    price: 0,
+                },
+                pickup: {
+                    period: '2 мая',
+                    price: 1000,
+                    point_count: 3,
+                },
             },
         };
     },
